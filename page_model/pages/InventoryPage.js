@@ -1,4 +1,4 @@
-import { Selector } from testcafe;
+import { Selector } from 'testcafe';
 
 class InventoryPage {
     constructor() {
@@ -10,4 +10,4 @@ class InventoryPage {
     }
 }
 
-export default InventoryPage()
+export default new InventoryPage()
