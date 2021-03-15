@@ -2,12 +2,12 @@ import { Selector } from testcafe;
 
 class InventoryPage {
     constructor() {
-        this.Title = Selector('')
-        this.inventoryItem = Selector('')
-        this.addToCartButton = Selector('')
-        this.cartPageLink = Selector('')
+        this.title = Selector('.product_label')
+        this.inventoryItem = Selector('.inventory_item')
+        this.addToCartButton = Selector('.btn_inventory')
+        this.cartPageLink = Selector('.shopping_cart_link')
 
     }
 }
 
-export default InventoryPage
+export default InventoryPage()
