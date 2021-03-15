@@ -7,9 +7,18 @@ fixture('Login feature testing')
 
 test('Users can login using valid credentials', async t => {
     await t
-        .typeText(LoginPage.usernameField, 'standard_user')
-        .typeText(LoginPage.userPasswordField, 'secret_sauce')
-        .click(LoginPage.loginButton)
+        .typeText(LoginPage.usernameField, CREDENTIALS.VALID_USER.USER_NAME)
+        .typeText(LoginPage.userPasswordField, CREDENTIALS.VALID_USER.PASSWORD)
+        .click(LoginPage.loginButton),
 
     await t.expect(InventoryPage.title.exists).ok()
+})
+
+test('Invalid user unable to login', async t => {
+    await t
+        .typeText(LoginPage.usernameField, CREDENTIALS.INVALID_USER.USER_NAME)
+        .typeText(LoginPage.userPasswordField, CREDENTIALS.INVALID_USER.PASSWORD)
+        .click(LoginPage.loginButton)
+
+    await t.expect(LoginPage.errorMessage.exists).ok()
 })
