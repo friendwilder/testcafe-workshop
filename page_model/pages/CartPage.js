@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe';
+import { Selector, t } from 'testcafe';
 
 class CartPage {
     constructor() {
@@ -6,7 +6,9 @@ class CartPage {
         this.cartItemList = Selector('.cart_list')
         this.cartItem = Selector('.cart_item')
         this.cartRemoveButton = Selector('.cart_button')
-        this.continueShoppintButton = Selector('.cart_footer .btn_secondary')
-        this.checkoutButton = Selector('checkout_button')
+        this.continueShoppingButton = Selector('.cart_footer.btn_secondary')
+        this.checkoutButton = Selector('.checkout_button')
     }
 }
+
+export default new CartPage()

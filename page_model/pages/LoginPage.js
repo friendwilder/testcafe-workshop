@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe';
+import { Selector, t } from 'testcafe';
 
 class LoginPage {
     constructor() {
@@ -7,6 +7,13 @@ class LoginPage {
         this.loginButton = Selector('#login-button')
         // this.loginButton = Selector('.btn-lg.btn-primary').withExactText('Login') Alternate method for TestCafe
         this.errorMessage = Selector('.error-button')
+    }
+
+    async submitLoginForm(username, password) {
+        await t
+        .typeText(this.usernameField, username)
+        .typeText(this.userPasswordField, password)
+        .click(this.loginButton)
     }
 }
 
