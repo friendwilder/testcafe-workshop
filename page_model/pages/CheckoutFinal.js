@@ -11,3 +11,6 @@ class CheckoutFinal {
         this.finishButton = Selector('.cart_button')
     }
 }
+
+
+export default new CheckoutFinal()

@@ -11,3 +11,11 @@ export const CREDENTIALS = {
         PASSWORD: process.env.PASSWORD
     }
 }
+
+export const USER_DETAILS = {
+    STANDARD_USER: {
+        FIRST_NAME: process.env.FIRST_NAME,
+        LAST_NAME: process.env.LAST_NAME,
+        POSTAL_CODE: process.env.POSTAL_CODE
+    }
+}

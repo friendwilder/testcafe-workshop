@@ -15,7 +15,7 @@ test('User is able to log out', async t => {
     await t.expect(LoginPage.loginButton.exists).ok()
 })
 
-test.only('User is able to visit the shopping cart', async t => {
+test('User is able to visit the shopping cart', async t => {
     await InventoryPage.gotoShoppingCart()
 
     await t.expect(CartPage.checkoutButton.exists).ok()

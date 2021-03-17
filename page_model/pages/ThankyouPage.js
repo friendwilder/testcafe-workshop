@@ -8,3 +8,6 @@ class ThankyouPage {
         this.ponyImage = Selector('.pony_express')
     }
 }
+
+
+export default new ThankyouPage()
