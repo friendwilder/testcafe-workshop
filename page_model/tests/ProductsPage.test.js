@@ -23,12 +23,12 @@ test('User is able to visit the shopping cart', async t => {
 
 test('Single item successfully added to shopping cart', async t => {
     await t
-    .click(InventoryPage.addToCartButton().nth(1))
+    .click(InventoryPage.item6AddToCartButton())
 
     await t.expect(InventoryPage.shoppingCartBadge.withExactText('1').exists).ok()
 })
 
-test.only('Multiple items successfully added to shopping cart', async t => {
+test('Multiple items successfully added to shopping cart', async t => {
     await t
     .click(InventoryPage.addToCartButton().nth(0))
     .click(InventoryPage.addToCartButton().nth(1))
