@@ -8,6 +8,7 @@ class InventoryPage {
         this.inventoryItem = Selector('.inventory_item')
         this.addToCartButton = Selector('.btn_inventory')
         this.cartPageLink = Selector('.shopping_cart_link')
+        this.shoppingCartBadge = Selector('.shopping_cart_badge')
 
     }
 
